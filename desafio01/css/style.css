@@ -1,0 +1,96 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-family: "Roboto", sans-serif;
+}
+:root {
+  --color-background: #282a36;
+}
+body {
+  background: var(--color-background);
+  color: #ffffff;
+}
+header {
+  padding: 30px;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.links a {
+  margin-right: 30px;
+  color: #ffffff;
+  letter-spacing: 0.05em;
+  text-decoration: none;
+  transition: 400ms;
+}
+.links a:hover {
+  color: blueviolet;
+}
+.first {
+  padding: 32px;
+  text-align: center;
+}
+.first img {
+  border-radius: 50%;
+}
+.first h1 {
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 42px;
+  letter-spacing: 0.05em;
+  margin: 32px;
+}
+.first p {
+  margin: 0 auto;
+  max-width: 500px;
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: 0.05em;
+}
+.second {
+  padding: 32px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+.second h2 {
+  font-size: 24px;
+  line-height: 34px;
+  font-weight: bold;
+  letter-spacing: 0.05em;
+}
+.list ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 32px;
+}
+.list li {
+  padding: 20px;
+}
+.list img {
+  margin-bottom: 10px;
+  width: 100px;
+  transition: 100ms;
+}
+.list li img:hover {
+  width: 102px;
+}
+.list p {
+  letter-spacing: 0.05em;
+}
+
+.footer {
+  padding: 32px;
+  text-align: center;
+}
+.footer a {
+  margin-left: 10px;
+  text-decoration: none;
+  color: white;
+  border-bottom: 1px solid blueviolet;
+  transition: 400ms;
+}
+.footer a:hover {
+  color: blueviolet;
+}
