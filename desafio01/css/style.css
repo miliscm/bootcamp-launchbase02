@@ -34,6 +34,11 @@ header {
 .first img {
   border-radius: 50%;
 }
+
+.first img:hover {
+  transform: scale(1.1);
+}
+
 .first h1 {
   font-weight: bold;
   font-size: 32px;
@@ -74,7 +79,7 @@ header {
   transition: 100ms;
 }
 .list li img:hover {
-  width: 102px;
+  transform: scale(1.1);
 }
 .list p {
   letter-spacing: 0.05em;
