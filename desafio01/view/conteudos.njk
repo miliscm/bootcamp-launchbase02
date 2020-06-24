@@ -12,38 +12,18 @@
   </section>
 
   <section class="cursos">
-    <div class="curso" id="starter">
-      <div class="curso-img">
-        <img src="./img/starter.svg" alt="">
+    {% for item in itens %}
+      <div class="curso" id="{{ item.id }}">
+        <div class="curso-img">
+          <img src="./img/{{ item.id }}.svg" alt="{{ item.id }}">
+        </div>
+        <div class="curso-content">
+          <h3>{{ item.title }}</h3>
+          <p>{{ item.modules }}</p>
+          <p>{{ item.price }}</p>
+        </div>
       </div>
-      <div class="curso-content">
-        <h3>Starter</h3>
-        <p>4 módulos</p>
-        <p>Free</p>
-      </div>
-    </div>
-
-    <div class="curso" id="launchbase">
-      <div class="curso-img">
-        <img src="./img/launchbase.svg" alt="">
-      </div>
-      <div class="curso-content">
-        <h3>Starter</h3>
-        <p>4 módulos</p>
-        <p>Free</p>
-      </div>
-    </div>
-
-    <div class="curso" id="gostack">
-      <div class="curso-img">
-        <img src="./img/gostack.svg" alt="">
-      </div>
-      <div class="curso-content">
-        <h3>Starter</h3>
-        <p>4 módulos</p>
-        <p class="">Free</p>
-      </div>
-    </div>
+    {% endfor %}
 
   </section>
 

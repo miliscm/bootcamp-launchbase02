@@ -5,39 +5,25 @@
 {% block content %}
   <section class="first">
     <div>
-      <img src="./img/logo-rocketseat.png" alt="">
+      <img src="./img/{{ sobre.imglogo }}" alt="">
     </div>
     <div>
-      <h1>Rocketseat</h1>
-      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint doloremque commodi quis. Rerum veritatis odio explicabo ipsum voluptatum delectus fuga, animi aperiam similique est cumque. Harum iste sequi autem.</p>
+      <h1>{{ sobre.namecompany }}</h1>
+      <p>{{ sobre.about }}</p>
     </div>
   </section>
   <section class="second">
     <div>
-      <h2>Principais Tecnologias</h2>
+      <h2>{{ sobre.subtitle }}</h2>
     </div>
     <div class="list">
       <ul>
-
-        <li>
-          <img src="./img/curso-nodejs.svg" alt="">
-          <p>NodeJS</p>
-        </li>
-
-        <li>
-          <img src="./img/curso-javascript.svg" alt="">
-          <p>Javascript</p>
-        </li>
-
-        <li>
-          <img src="./img/curso-reactjs.svg" alt="">
-          <p>ReactJS</p>
-        </li>
-
-        <li>
-          <img src="./img/curso-react-native.svg" alt="">
-          <p>React Native</p>
-        </li>
+        {% for cursos in sobre.imgtec %}
+          <li>
+            <img src="./img/{{ cursos.nameimg }}" alt="">
+            <p>{{ cursos.titletec }}</p>
+          </li>
+        {% endfor %}
       </ul>
     </div>
   </section>
