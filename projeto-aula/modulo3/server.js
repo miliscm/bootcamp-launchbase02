@@ -14,6 +14,7 @@ server.set("view engine", "njk");
 nunjucks.configure("views", {
   express: server,
   autoescape: false,
+  noCache: true,
 });
 //criando a pasta view dentro da pasta e colocando o index la, preciso configurar isso
 //isso são rotas
@@ -44,6 +45,17 @@ server.get("/", function (req, res) {
 });
 server.get("/classes", function (req, res) {
   return res.render("classes", { items: videos });
+});
+server.get("/video", function (req, res) {
+  const id = req.query.id;
+  const video = videos.find(function (video) {
+    return video.id == id;
+  });
+
+  if (!video) {
+    return res.send("video not found!");
+  }
+  return res.render("video", { item: video });
 });
 server.listen(5000, function () {
   console.log("server ok");

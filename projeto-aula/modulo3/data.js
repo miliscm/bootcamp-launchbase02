@@ -4,6 +4,7 @@ module.exports = [
     title: "Configurando VSCODE | Rocketseat",
     duration: "57 min",
     price: "Free",
+    featured: true,
   },
   {
     id: "bg-U0xZwcRk",
@@ -16,6 +17,7 @@ module.exports = [
     title: "Recriando Interface do Nubank | Rocketseat",
     duration: "57 min",
     price: "Free",
+    featured: true,
   },
   {
     id: "7A4UQGrFU9Q",
