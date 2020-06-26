@@ -9,6 +9,8 @@ server.use(express.static("public"));
 server.set("view engine", "njk");
 nunjucks.configure("view", {
   express: server,
+  noCache: true,
+  autoescape: true,
 });
 //criando rotas
 server.get("/", function (req, res) {
@@ -30,9 +32,22 @@ server.get("/", function (req, res) {
 server.get("/conteudos", function (req, res) {
   return res.render("conteudos", { itens: contents });
 });
-server.use(function (req, res) {
-  res.status(404).render("not-found");
+// server.use(function (req, res) {
+//   res.status(404).render("not-found");
+// });
+server.get("/courses/:id", function (req, res) {
+  const id = req.params.id;
+  const course = contents.find(function (course) {
+    if (course.id == id) {
+      return true;
+    }
+  });
+  if (!course) {
+    return res.send("course not found");
+  }
+  return res.render("course", { item: course });
 });
+
 //iniciando o server
 server.listen(5000, function () {
   console.log("oi");
