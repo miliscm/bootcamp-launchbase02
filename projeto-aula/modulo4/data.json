@@ -1,0 +1,22 @@
+{
+  "instructors": [
+    {
+      "id": 1,
+      "name": "milena calixto mocci",
+      "avatar_url": "http://google.com.br",
+      "birth": 1593302400000,
+      "gender": "F",
+      "services": "musculação",
+      "created_at": 1594065918855
+    },
+    {
+      "id": 2,
+      "name": "Geni calixto mocci",
+      "avatar_url": "http://google.com.br",
+      "birth": 1588723200000,
+      "gender": "F",
+      "services": "musculação, crossfit",
+      "created_at": 1594065970122
+    }
+  ]
+}
