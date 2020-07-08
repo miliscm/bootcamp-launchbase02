@@ -55,7 +55,7 @@ body {
   grid-template-columns: 1fr 2fr;
   width: 800px;
   min-height: 300px;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: white;
   margin: 60px auto;
   box-shadow: 23px 23px 14px -3px rgba(0, 0, 0, 0.53);
   animation-name: up;
@@ -100,7 +100,7 @@ body {
 }
 .cadastros .inform .item div:nth-child(2) {
   letter-spacing: 0.05em;
-  font-size: 18px;
+  font-size: 14px;
 
   font-weight: bold;
 }
@@ -110,4 +110,38 @@ body {
   background-color: rgb(121, 108, 207);
   padding: 8px;
   border-radius: 8px;
+}
+.inform .item input[type="text"] {
+  width: 100%;
+  height: 24px;
+  border: none;
+  outline: none;
+}
+.inform .item input[type="date"] {
+  height: 24px;
+  border: none;
+  outline: none;
+}
+.inform .item select {
+  border: none;
+  outline: none;
+}
+.inform .item input[type="radio"] {
+  margin-right: 5px;
+  border: none;
+  outline: none;
+}
+.inform .item span {
+  margin-top: 5px;
+}
+form button {
+  width: 100px;
+  margin-bottom: 10px;
+  padding: 4px;
+  border: none;
+  border-radius: 5px;
+  background-color: orange;
+  color: white;
+  font-weight: bold;
+  margin-left: 30px;
 }
